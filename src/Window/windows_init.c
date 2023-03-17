@@ -6,7 +6,7 @@
 /*   By: justinmorneau <justinmorneau@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 17:59:12 by justinmorne       #+#    #+#             */
-/*   Updated: 2023/03/16 22:08:17 by justinmorne      ###   ########.fr       */
+/*   Updated: 2023/03/17 01:08:50 by justinmorne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ bool init_win( void )
         perror("ERROR WIN INIT ");
         return (FAIL);
     }
-    data->color_buffer = (u_int32_t *)calloc(sizeof(u_int32_t), HEIGHT_WIN * WIDTH_WIN);
+    data->color_buffer = (u_int32_t *)calloc(sizeof(u_int32_t), N_PIXEL);
     if (!data->color_buffer)
     {
         perror("ERROR MALLO ");

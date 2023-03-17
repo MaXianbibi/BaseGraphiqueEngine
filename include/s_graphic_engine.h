@@ -6,7 +6,7 @@
 /*   By: justinmorneau <justinmorneau@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 16:48:31 by jmorneau          #+#    #+#             */
-/*   Updated: 2023/03/16 22:05:50 by justinmorne      ###   ########.fr       */
+/*   Updated: 2023/03/17 13:15:20 by justinmorne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ struct s_data
 {
     SDL_Window 		    *win;
     SDL_Renderer 	    *renderer;
+    SDL_Texture         *color_buffer_texture;
+
     u_int32_t           *color_buffer;
     bool				is_running;	
 };

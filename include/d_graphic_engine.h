@@ -6,7 +6,7 @@
 /*   By: justinmorneau <justinmorneau@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 16:47:16 by jmorneau          #+#    #+#             */
-/*   Updated: 2023/03/16 18:44:17 by justinmorne      ###   ########.fr       */
+/*   Updated: 2023/03/17 01:08:23 by justinmorne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 
 # define HEIGHT_WIN     500
 # define WIDTH_WIN      1000
+
+# define N_PIXEL        (500 * 1000)
 
 # define GATA       t_data * data = getData();
 

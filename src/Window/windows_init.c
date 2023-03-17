@@ -6,7 +6,7 @@
 /*   By: justinmorneau <justinmorneau@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 17:59:12 by justinmorne       #+#    #+#             */
-/*   Updated: 2023/03/17 01:08:50 by justinmorne      ###   ########.fr       */
+/*   Updated: 2023/03/17 13:43:34 by justinmorne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,28 +17,19 @@ bool init_win( void )
     t_data * data = getData();
     
     if (SDL_Init(SDL_INIT_EVERYTHING))
-    {
-        perror("ERROR WINDOW INIT "); 
-        return (FAIL);
-    }
+        ft_error();
     data->win = SDL_CreateWindow("B3D", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WIDTH_WIN, HEIGHT_WIN, 0);
     if (!data->win)
-    {
-        perror("ERROR WIN INIT ");
-        return (FAIL);
-    }
+        ft_error();
     data->color_buffer = (u_int32_t *)calloc(sizeof(u_int32_t), N_PIXEL);
     if (!data->color_buffer)
     {
-        perror("ERROR MALLO ");
+        perror("ERROR MALLOC ");
         return (FAIL);   
     }
     data->renderer = SDL_CreateRenderer(data->win, -1, 0);
     if (!data->renderer)
-    {
-        perror("ERROR RENDERER INIT ");
-        return (FAIL);
-    }
+        ft_error();
     return (SUCCESS);
 }
 

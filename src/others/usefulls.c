@@ -6,7 +6,7 @@
 /*   By: justinmorneau <justinmorneau@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 17:35:18 by justinmorne       #+#    #+#             */
-/*   Updated: 2023/03/16 22:26:35 by justinmorne      ###   ########.fr       */
+/*   Updated: 2023/03/17 13:40:40 by justinmorne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,17 @@ void freeData( void )
         data = NULL;
     }
     SDL_Quit();
+}
+
+void ft_error ( void )
+{
+    fprintf(stderr, "ERROR : ");
+    SDL_GetError();
+    ft_exit ( 1 );
+}
+
+void ft_exit(uint32_t n)
+{
+    freeData();
+    exit (n);    
 }

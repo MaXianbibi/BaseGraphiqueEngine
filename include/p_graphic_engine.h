@@ -6,7 +6,7 @@
 /*   By: justinmorneau <justinmorneau@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 16:48:41 by jmorneau          #+#    #+#             */
-/*   Updated: 2023/03/17 13:39:52 by justinmorne      ###   ########.fr       */
+/*   Updated: 2023/03/17 13:49:21 by justinmorne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void    process_input( void );
 void    render_win( void );
 void    clear_color_buffer ( u_int32_t color);
 void    ft_exit(uint32_t n);
-void    ft_error ( void );
+void    ft_error ( char * error_msg );
 
 
 #endif

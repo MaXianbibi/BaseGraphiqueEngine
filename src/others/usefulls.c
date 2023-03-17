@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   singleton.c                                        :+:      :+:    :+:   */
+/*   usefulls.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: justinmorneau <justinmorneau@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 17:35:18 by justinmorne       #+#    #+#             */
-/*   Updated: 2023/03/17 13:40:40 by justinmorne      ###   ########.fr       */
+/*   Updated: 2023/03/17 13:50:48 by justinmorne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,9 +54,9 @@ void freeData( void )
     SDL_Quit();
 }
 
-void ft_error ( void )
+void ft_error ( char * error_msg )
 {
-    fprintf(stderr, "ERROR : ");
+    fprintf(stderr, "ERROR : %s\n", error_msg);
     SDL_GetError();
     ft_exit ( 1 );
 }

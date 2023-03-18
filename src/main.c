@@ -6,7 +6,7 @@
 /*   By: justinmorneau <justinmorneau@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 15:16:52 by justinmorne       #+#    #+#             */
-/*   Updated: 2023/03/17 14:00:26 by justinmorne      ###   ########.fr       */
+/*   Updated: 2023/03/17 20:34:23 by justinmorne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ static void init_data( void )
 	if (!data->is_running)
 		ft_exit (1);
 	setup_window();
+	
+	data->camera.pos.z = -5;
 }
 
 int main ( void )

@@ -6,7 +6,7 @@
 /*   By: justinmorneau <justinmorneau@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 16:47:16 by jmorneau          #+#    #+#             */
-/*   Updated: 2023/03/17 14:02:05 by justinmorne      ###   ########.fr       */
+/*   Updated: 2023/03/17 20:34:34 by justinmorne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,10 @@
 # define FAIL           false
 
 # define GATA       t_data * data = getData();
+
+# define fov_factore 640.f
+
+# define N_POINTS 729
+
 
 #endif

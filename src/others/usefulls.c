@@ -6,7 +6,7 @@
 /*   By: justinmorneau <justinmorneau@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 17:35:18 by justinmorne       #+#    #+#             */
-/*   Updated: 2023/03/17 13:50:48 by justinmorne      ###   ########.fr       */
+/*   Updated: 2023/03/17 21:03:12 by justinmorne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,11 @@ void freeData( void )
 
     if (data)
     {
+        if (data->color_buffer_texture)
+        {
+            SDL_DestroyTexture(data->color_buffer_texture);
+            data->color_buffer_texture = NULL;
+        }
         if (data->color_buffer)
         {
             free(data->color_buffer);
@@ -65,4 +70,32 @@ void ft_exit(uint32_t n)
 {
     freeData();
     exit (n);    
+}
+
+mesh_t *    creat_new_mesh( void )
+{
+    mesh_t * tmp;
+
+    tmp = calloc(sizeof(mesh_t), 1);
+    if (!tmp)
+    {
+        perror("ERROR MALLOC ");
+        ft_exit (1);
+    }
+    return (tmp);
+}
+
+void insert_at_head(mesh_t **head, mesh_t *node_to_insert)
+{
+	mesh_t *tmp;
+
+	tmp = *head;
+	if (!*head)
+		*head = node_to_insert;
+	else
+	{
+		while (tmp->next != NULL)
+			tmp = tmp->next;
+		tmp->next = node_to_insert;
+	}
 }

@@ -1,0 +1,8 @@
+% amélioration
+
+
+! List chainer
+    - Je pense que pour le coup, une liste chainer qui contien la mesh (vec3_t),
+    - la projection 2d (vec2_d) et un next serait bien plus efficace !
+
+    

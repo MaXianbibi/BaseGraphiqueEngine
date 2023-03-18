@@ -6,7 +6,7 @@
 #    By: justinmorneau <justinmorneau@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/31 15:53:17 by jmorneau          #+#    #+#              #
-#    Updated: 2023/03/16 21:22:36 by justinmorne      ###   ########.fr        #
+#    Updated: 2023/03/17 21:32:14 by justinmorne      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ OBJS			= $(SRCS:.c=.o)
 
 CC				= gcc
 RM				= rm -f
-CFLAGS			= -Wall -Wextra -Werror -I.
+CFLAGS			= -Wall -Wextra -Werror -I. -g
 
 NAME			= libft.a
 

@@ -6,7 +6,7 @@
 /*   By: justinmorneau <justinmorneau@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 16:48:31 by jmorneau          #+#    #+#             */
-/*   Updated: 2023/03/17 21:29:50 by justinmorne      ###   ########.fr       */
+/*   Updated: 2023/03/18 17:31:09 by justinmorne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ struct mesh_s
 {
     vec2_t           * projection;
     vec3_t           * mesh;
+    vec3_t             rotation;
 
     vec3_t          pos;
     

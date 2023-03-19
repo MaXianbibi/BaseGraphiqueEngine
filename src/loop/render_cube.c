@@ -6,7 +6,7 @@
 /*   By: justinmorneau <justinmorneau@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 18:40:49 by justinmorne       #+#    #+#             */
-/*   Updated: 2023/03/17 21:27:30 by justinmorne      ###   ########.fr       */
+/*   Updated: 2023/03/18 18:24:24 by justinmorne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ vec2_t project(vec3_t point)
 
 
     point.z -= data->camera.pos.z;
-    projected.x = point.x * fov_factore / point.z; 
-    projected.y = point.y * fov_factore / point.z;
+    projected.x = (point.x * fov_factore) / point.z; 
+    projected.y = (point.y * fov_factore) / point.z;
 
 
     return (projected);

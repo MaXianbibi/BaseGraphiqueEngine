@@ -2,7 +2,7 @@ NAME = B3D
 LIBFT = libft/libft.a
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -g
-LDFLAGS = -lSDL2
+LDFLAGS = -lSDL2 -lm
 RM = rm -f
 
 SRC_DIR = src/

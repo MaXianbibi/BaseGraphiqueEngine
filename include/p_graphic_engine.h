@@ -6,7 +6,7 @@
 /*   By: justinmorneau <justinmorneau@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 16:48:41 by jmorneau          #+#    #+#             */
-/*   Updated: 2023/03/17 21:24:04 by justinmorne      ###   ########.fr       */
+/*   Updated: 2023/03/18 17:34:42 by justinmorne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,17 @@ mesh_t *    creat_new_mesh( void );
 void        insert_at_head(mesh_t **head, mesh_t *node_to_insert);
 
 void update();
+
 // render mesh
 
 void render_cube( void );
 vec2_t project(vec3_t point);
+
+// transformation 
+
+vec3_t meshRotationX(vec3_t v, float angle);
+vec3_t meshRotationY(vec3_t v, float angle);
+vec3_t meshRotationZ(vec3_t v, float angle);
+
 
 #endif

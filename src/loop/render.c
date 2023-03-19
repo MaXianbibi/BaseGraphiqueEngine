@@ -6,7 +6,7 @@
 /*   By: justinmorneau <justinmorneau@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 18:19:53 by justinmorne       #+#    #+#             */
-/*   Updated: 2023/03/17 21:31:15 by justinmorne      ###   ########.fr       */
+/*   Updated: 2023/03/18 16:05:29 by justinmorne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,8 @@ void project2dMesh ( void )
     GATA
     mesh_t * tmp = data->head;
 
-    tmp->pos.x = 500;
-    tmp->pos.y = 500;
+    tmp->pos.x = data->w_win / 2;
+    tmp->pos.y = data->h_win / 2;
     
     while (tmp)
     {

@@ -6,7 +6,7 @@
 /*   By: justinmorneau <justinmorneau@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 16:48:48 by jmorneau          #+#    #+#             */
-/*   Updated: 2023/03/15 17:57:46 by justinmorne      ###   ########.fr       */
+/*   Updated: 2023/03/18 17:36:26 by justinmorne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@
 # include <fcntl.h>
 # include <SDL2/SDL.h>
 # include <stdbool.h>
+# include <math.h>
 
 #endif

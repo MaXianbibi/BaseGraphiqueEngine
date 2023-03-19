@@ -6,7 +6,7 @@
 /*   By: justinmorneau <justinmorneau@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 18:06:55 by justinmorne       #+#    #+#             */
-/*   Updated: 2023/03/17 21:34:05 by justinmorne      ###   ########.fr       */
+/*   Updated: 2023/03/18 18:31:57 by justinmorne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,23 @@ void update()
 {
     GATA
     mesh_t * tmp = data->head;
-    
+
     while (tmp)
     {
+        tmp->rotation.y += 0.025;
+        tmp->rotation.z += 0.025;
+        tmp->rotation.x += 0.025;
+        
         for (u_int32_t j = 0; j < N_POINTS; j++)
-            tmp->projection[j] = project(tmp->mesh[j]);
+        {
+            vec3_t test = tmp->mesh[j];
+            test = meshRotationX(test, tmp->rotation.x);   
+            test = meshRotationY(test, tmp->rotation.y);   
+            test = meshRotationZ(test, tmp->rotation.z);  
+            
+
+            tmp->projection[j] = project(test);
+        }
         tmp = tmp->next;
     }
 }
@@ -28,12 +40,12 @@ void update()
 bool loop_win(void)
 {
     GATA
-        render_cube();
+    render_cube();
     while (data->is_running)
     {
         process_input();
-        render_win();
         update();
+        render_win();
         SDL_Delay(1000 / 60);
     }
     return (SUCCESS);

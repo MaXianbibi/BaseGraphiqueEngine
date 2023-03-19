@@ -6,7 +6,7 @@
 /*   By: justinmorneau <justinmorneau@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 18:07:39 by justinmorne       #+#    #+#             */
-/*   Updated: 2023/03/16 18:18:41 by justinmorne      ###   ########.fr       */
+/*   Updated: 2023/03/18 17:58:08 by justinmorne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,13 @@ void process_input(void)
             {
                 case SDLK_ESCAPE:
                     data->is_running = 0;
-                break;
+                    break;
+                case SDLK_z:
+                    data->camera.pos.z += 0.25;
+                    break;
+                case SDLK_x:
+                    data->camera.pos.z -= 0.25;
+                
             }
         }
         break;

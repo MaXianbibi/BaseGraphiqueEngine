@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   loop_win.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: justinmorneau <justinmorneau@student.42    +#+  +:+       +#+        */
+/*   By: jmorneau <jmorneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 18:06:55 by justinmorne       #+#    #+#             */
-/*   Updated: 2023/03/18 18:31:57 by justinmorne      ###   ########.fr       */
+/*   Updated: 2023/03/20 19:09:18 by jmorneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/graphic_engine.h"
+
+const u_int32_t FRAME_RATE = (1000 / 60);
 
 void update()
 {
@@ -46,7 +48,7 @@ bool loop_win(void)
         process_input();
         update();
         render_win();
-        SDL_Delay(1000 / 60);
+        SDL_Delay(FRAME_RATE);
     }
     return (SUCCESS);
 }
